@@ -1,136 +1,105 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html><html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LEO STORE | شحن الألعاب</title>
     <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<header>
+</head><body><header>
     <div class="logo">LEO <span>STORE</span></div>
-    <p>شحن الألعاب بسرعة وسهولة 🎮</p>
-</header>
+    <p>متجر شحن الألعاب 🎮</p>
+</header><main><section class="hero">
+    <h1>اختار لعبتك</h1>
+    <p>شحن سريع وآمن</p>
+</section>
 
-<main>
+<section class="games">
 
-    <section class="hero">
-        <h1>اختار لعبتك</h1>
-        <p>اختار اللعبة وشوف الباقات المتاحة</p>
-    </section>
+    <a href="free-fire.html" class="game-card">
+        <div class="game-image fire">🔥</div>
+        <h2>Free Fire</h2>
+        <p>Diamonds</p>
+        <span>عرض الباقات ←</span>
+    </a>
 
-    <section class="games">
+    <a href="pubg.html" class="game-card">
+        <div class="game-image pubg">🎯</div>
+        <h2>PUBG Mobile</h2>
+        <p>UC</p>
+        <span>عرض الباقات ←</span>
+    </a>
 
-        <a href="free-fire.html" class="game-card">
-            <div class="game-icon">🔥</div>
-            <h2>Free Fire</h2>
-            <p>Diamonds</p>
-            <span>عرض الباقات ←</span>
-        </a>
+    <a href="blood-strike.html" class="game-card">
+        <div class="game-image blood">⚡</div>
+        <h2>Blood Strike</h2>
+        <p>Gold</p>
+        <span>عرض الباقات ←</span>
+    </a>
 
-        <a href="pubg.html" class="game-card">
-            <div class="game-icon">🎯</div>
-            <h2>PUBG Mobile</h2>
-            <p>UC</p>
-            <span>عرض الباقات ←</span>
-        </a>
+</section>
 
-        <a href="blood-strike.html" class="game-card">
-            <div class="game-icon">⚡</div>
-            <h2>Blood Strike</h2>
-            <p>Gold</p>
-            <span>عرض الباقات ←</span>
-        </a>
+<section class="payment">
+    <h2>💳 طرق الدفع</h2>
+    <p>اختار طريقة الدفع المناسبة</p>
 
-    </section>
-
-
-    <section class="payment">
-
-        <h2>💳 طرق الدفع</h2>
-        <p>اختار المحفظة المناسبة</p>
-
-        <button class="payment-card" onclick="showPayment('vodafone')">
-            <img src="vodafone-cash.svg" alt="Vodafone Cash">
-            <div>
-                <strong>Vodafone Cash</strong>
-                <small>اضغط لعرض رقم المحفظة</small>
-            </div>
-            <b>←</b>
-        </button>
-
-        <button class="payment-card" onclick="showPayment('etisalat')">
-            <img src="etisalat-cash.svg" alt="Etisalat Cash">
-            <div>
-                <strong>Etisalat Cash</strong>
-                <small>اضغط لعرض رقم المحفظة</small>
-            </div>
-            <b>←</b>
-        </button>
-
-    </section>
-
-
-    <section class="contact">
-
-        <h2>📱 تواصل معنا</h2>
-
-        <a
-            class="whatsapp"
-            href="https://wa.me/201108302815?text=مرحباً%20LEO%20STORE"
-            target="_blank">
-            💬 واتساب
-        </a>
-
-        <a
-            class="instagram"
-            href="https://www.instagram.com/mohamedabdelazizx/"
-            target="_blank">
-            📸 Instagram
-        </a>
-
-    </section>
-
-</main>
-
-
-<div id="paymentBox" class="popup">
-
-    <div class="popup-content">
-
-        <button class="close" onclick="closePayment()">×</button>
-
-        <img id="popupLogo" src="" alt="">
-
-        <h2 id="popupTitle"></h2>
-
-        <p>حوّل المبلغ إلى الرقم التالي:</p>
-
-        <div class="number-box">
-            <strong id="popupNumber"></strong>
-            <button onclick="copyNumber()">نسخ</button>
+    <button class="payment-card" onclick="showPayment('vodafone')">
+        <img src="vodafone-cash.svg" alt="Vodafone Cash">
+        <div>
+            <strong>Vodafone Cash</strong>
+            <small>اضغط لعرض رقم المحفظة</small>
         </div>
+        <b>←</b>
+    </button>
 
-        <a
-            class="popup-whatsapp"
-            href="https://wa.me/201108302815?text=مرحباً%20LEO%20STORE"
-            target="_blank">
-            إرسال إثبات التحويل 💬
-        </a>
+    <button class="payment-card" onclick="showPayment('etisalat')">
+        <img src="etisalat-cash.svg" alt="Etisalat Cash">
+        <div>
+            <strong>Etisalat Cash</strong>
+            <small>اضغط لعرض رقم المحفظة</small>
+        </div>
+        <b>←</b>
+    </button>
+</section>
 
+<section class="contact">
+    <h2>📱 تواصل معنا</h2>
+
+    <a class="whatsapp"
+       href="https://wa.me/201108302815?text=مرحباً%20LEO%20STORE"
+       target="_blank">
+        💬 واتساب
+    </a>
+
+    <a class="instagram"
+       href="https://www.instagram.com/mohamedabdelazizx/"
+       target="_blank">
+        📸 Instagram
+    </a>
+</section>
+
+</main><div id="paymentBox" class="popup"><div class="popup-content">
+
+    <button class="close" onclick="closePayment()">×</button>
+
+    <img id="popupLogo" src="" alt="">
+
+    <h2 id="popupTitle"></h2>
+
+    <p>حوّل المبلغ إلى الرقم التالي:</p>
+
+    <div class="number-box">
+        <strong id="popupNumber"></strong>
+        <button onclick="copyNumber()">نسخ</button>
     </div>
+
+    <a class="popup-whatsapp"
+       href="https://wa.me/201108302815?text=مرحباً%20LEO%20STORE%20أريد%20إرسال%20إثبات%20التحويل"
+       target="_blank">
+        إرسال إثبات التحويل 💬
+    </a>
 
 </div>
 
-
-<footer>
+</div><footer>
     © 2026 LEO STORE
-</footer>
-
-
-<script src="script.js"></script>
-
-</body>
+</footer><script src="script.js"></script></body>
 </html>
