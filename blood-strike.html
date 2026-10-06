@@ -1,46 +1,103 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html><html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blood Strike | LEO STORE</title>
-<link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Strike | LEO STORE</title>
+    <link rel="stylesheet" href="style.css">
+</head><body><header>
     <div class="logo">LEO <span>STORE</span></div>
     <p>Blood Strike ⚡</p>
-</header>
+</header><main><section class="hero">
+    <h1>Blood Strike ⚡</h1>
+    <p>شحن Gold</p>
+</section><section class="contact"><h2>🆔 اكتب UID اللاعب</h2>
 
-<main>
+<input
+    id="playerId"
+    type="text"
+    inputmode="numeric"
+    placeholder="اكتب UID هنا"
+    style="width:100%;padding:15px;margin:15px 0;border-radius:12px;border:1px solid #292f43;background:#080a12;color:white;font-size:16px;text-align:center;"
+>
 
-<section class="hero">
-    <h1>Blood Strike</h1>
-    <p>Gold</p>
-</section>
+</section><section class="payment"><h2>🪙 باقات Gold</h2>
 
-<section class="contact">
-    <h2>الباقات قريبًا ⚡</h2>
-    <p>سيتم إضافة باقات Blood Strike هنا.</p>
+<button class="payment-card" onclick="orderGame('Blood Strike','100 Gold','59.99')">
+    <div>
+        <strong>🪙 100 Gold</strong>
+        <small>59.99 جنيه</small>
+    </div>
+    <b>اطلب</b>
+</button>
 
-    <a class="whatsapp"
-       href="https://wa.me/201108302815?text=مرحباً%20LEO%20STORE%20أريد%20شحن%20Blood%20Strike"
-       target="_blank">
-       💬 اطلب عن طريق واتساب
-    </a>
+<button class="payment-card" onclick="orderGame('Blood Strike','300 Gold','159.99')">
+    <div>
+        <strong>🪙 300 Gold</strong>
+        <small>159.99 جنيه</small>
+    </div>
+    <b>اطلب</b>
+</button>
 
-    <a class="instagram"
-       href="https://www.instagram.com/mohamedabdelazizx/"
-       target="_blank">
-       📸 Instagram
-    </a>
-</section>
+<button class="payment-card" onclick="orderGame('Blood Strike','500 Gold','249.99')">
+    <div>
+        <strong>🪙 500 Gold</strong>
+        <small>249.99 جنيه</small>
+    </div>
+    <b>اطلب</b>
+</button>
 
-</main>
+<button class="payment-card" onclick="orderGame('Blood Strike','1000 Gold','449.99')">
+    <div>
+        <strong>🪙 1000 Gold</strong>
+        <small>449.99 جنيه</small>
+    </div>
+    <b>اطلب</b>
+</button>
 
-<footer>© 2026 LEO STORE</footer>
+</section><section class="contact"><a
+    class="whatsapp"
+    href="https://wa.me/201108302815?text=مرحباً%20LEO%20STORE%20أريد%20شحن%20Blood%20Strike"
+    target="_blank">
+    💬 تواصل معنا على واتساب
+</a>
 
-</body>
+</section></main><footer>
+    © 2026 LEO STORE
+</footer><script>
+
+function orderGame(game, product, price) {
+
+    const playerId =
+        document.getElementById("playerId").value.trim();
+
+    if (playerId === "") {
+
+        alert("من فضلك اكتب UID أولاً.");
+
+        document.getElementById("playerId").focus();
+
+        return;
+    }
+
+    const message =
+`مرحباً LEO STORE 👋
+
+🎮 اللعبة: ${game}
+
+📦 الباقة: ${product}
+
+💰 السعر: ${price} جنيه
+
+🆔 UID: ${playerId}
+
+أريد طلب هذه الباقة.`;
+
+    const url =
+        "https://wa.me/201108302815?text=" +
+        encodeURIComponent(message);
+
+    window.open(url, "_blank");
+}
+
+</script></body>
 </html>
