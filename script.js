@@ -1,66 +1,59 @@
 const wallets = {
+vodafone: {
+title: "Vodafone Cash",
+number: "01094676883",
+logo: "vodafone-cash.svg"
+},
 
-    vodafone: {
-        title: "Vodafone Cash",
-        number: "01094676883",
-        logo: "vodafone-cash.svg"
-    },
-
-    etisalat: {
-        title: "Etisalat Cash",
-        number: "01109302815",
-        logo: "etisalat-cash.svg"
-    }
+etisalat: {
+    title: "Etisalat Cash",
+    number: "01109302815",
+    logo: "etisalat-cash.svg"
+}
 
 };
 
-
 let currentNumber = "";
 
-
 function showPayment(type) {
+const wallet = wallets[type];
 
-    const wallet = wallets[type];
+currentNumber = wallet.number;
 
-    currentNumber = wallet.number;
+document.getElementById("popupTitle").textContent =
+    wallet.title;
 
-    document.getElementById("popupTitle").textContent =
-        wallet.title;
+document.getElementById("popupNumber").textContent =
+    wallet.number;
 
-    document.getElementById("popupNumber").textContent =
-        wallet.number;
+document.getElementById("popupLogo").src =
+    wallet.logo;
 
-    document.getElementById("popupLogo").src =
-        wallet.logo;
+document.getElementById("paymentBox")
+    .classList.add("active");
 
-    document.getElementById("paymentBox")
-        .classList.add("active");
 }
-
 
 function closePayment() {
-
-    document.getElementById("paymentBox")
-        .classList.remove("active");
+document.getElementById("paymentBox")
+.classList.remove("active");
 }
-
 
 function copyNumber() {
-
-    navigator.clipboard.writeText(currentNumber);
-
-    alert("تم نسخ رقم المحفظة ✓");
-
+navigator.clipboard.writeText(currentNumber)
+.then(() => {
+alert("تم نسخ رقم المحفظة ✓");
+})
+.catch(() => {
+alert("انسخ الرقم يدويًا: " + currentNumber);
+});
 }
 
-
 document.getElementById("paymentBox").addEventListener(
-    "click",
-    function(event) {
-
-        if (event.target === this) {
-            closePayment();
-        }
-
-    }
+"click",
+function(event) {
+if (event.target === this) {
+closePayment();
+}
+}
 );
