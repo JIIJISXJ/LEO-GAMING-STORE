@@ -1,46 +1,95 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html><html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Fire | LEO STORE</title>
-<link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Fire | LEO STORE</title>
+    <link rel="stylesheet" href="style.css">
+</head><body><header>
     <div class="logo">LEO <span>STORE</span></div>
     <p>Free Fire 🔥</p>
-</header>
+</header><main><section class="hero">
+    <h1>Free Fire 🔥</h1>
+    <p>شحن Diamonds</p>
+</section><section class="contact"><h2>🆔 اكتب ID اللاعب</h2>
 
-<main>
+<input
+    id="playerId"
+    type="text"
+    inputmode="numeric"
+    placeholder="اكتب Player ID هنا"
+    style="width:100%;padding:15px;margin:15px 0;border-radius:12px;border:1px solid #292f43;background:#080a12;color:white;font-size:16px;text-align:center;"
+>
 
-<section class="hero">
-    <h1>Free Fire</h1>
-    <p>Diamonds</p>
-</section>
+</section><section class="payment"><h2>💎 باقات Diamonds</h2>
 
-<section class="contact">
-    <h2>الباقات قريبًا 🔥</h2>
-    <p>سيتم إضافة باقات Free Fire هنا.</p>
+<button class="payment-card" onclick="orderGame('Free Fire','100 Diamonds','54.99')">
+    <div>
+        <strong>💎 100 Diamonds</strong>
+        <small>54.99 جنيه</small>
+    </div>
+    <b>اطلب</b>
+</button>
 
-    <a class="whatsapp"
-       href="https://wa.me/201108302815?text=مرحباً%20LEO%20STORE%20أريد%20شحن%20Free%20Fire"
-       target="_blank">
-       💬 اطلب عن طريق واتساب
-    </a>
+<button class="payment-card" onclick="orderGame('Free Fire','310 Diamonds','164.99')">
+    <div>
+        <strong>💎 310 Diamonds</strong>
+        <small>164.99 جنيه</small>
+    </div>
+    <b>اطلب</b>
+</button>
 
-    <a class="instagram"
-       href="https://www.instagram.com/mohamedabdelazizx/"
-       target="_blank">
-       📸 Instagram
-    </a>
-</section>
+<button class="payment-card" onclick="orderGame('Free Fire','520 Diamonds','274.99')">
+    <div>
+        <strong>💎 520 Diamonds</strong>
+        <small>274.99 جنيه</small>
+    </div>
+    <b>اطلب</b>
+</button>
 
-</main>
+</section><section class="contact"><a
+    class="whatsapp"
+    href="https://wa.me/201108302815?text=مرحباً%20LEO%20STORE"
+    target="_blank">
+    💬 تواصل معنا على واتساب
+</a>
 
-<footer>© 2026 LEO STORE</footer>
+</section></main><footer>
+    © 2026 LEO STORE
+</footer><script>
 
-</body>
+function orderGame(game, product, price) {
+
+    const playerId =
+        document.getElementById("playerId").value.trim();
+
+    if (playerId === "") {
+
+        alert("من فضلك اكتب Player ID أولاً.");
+
+        document.getElementById("playerId").focus();
+
+        return;
+    }
+
+    const message =
+`مرحباً LEO STORE 👋
+
+🎮 اللعبة: ${game}
+
+📦 الباقة: ${product}
+
+💰 السعر: ${price} جنيه
+
+🆔 Player ID: ${playerId}
+
+أريد طلب هذه الباقة.`;
+
+    const url =
+        "https://wa.me/201108302815?text=" +
+        encodeURIComponent(message);
+
+    window.open(url, "_blank");
+}
+
+</script></body>
 </html>
