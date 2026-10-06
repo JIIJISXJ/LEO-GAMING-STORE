@@ -1,402 +1,347 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
 
 body {
-    font-family: Arial, Tahoma, sans-serif;
-    background: #080a12;
-    color: white;
-    min-height: 100vh;
+font-family: Arial, Tahoma, sans-serif;
+background: #080a12;
+color: white;
+min-height: 100vh;
 }
 
 a {
-    text-decoration: none;
-    color: white;
+text-decoration: none;
+color: white;
 }
 
 button {
-    font-family: inherit;
+font-family: inherit;
 }
-
 
 /* HEADER */
 
 header {
-    text-align: center;
-    padding: 35px 15px 20px;
+text-align: center;
+padding: 35px 15px 20px;
 }
 
 .logo {
-    font-size: 38px;
-    font-weight: bold;
+font-size: 38px;
+font-weight: bold;
 }
 
 .logo span {
-    color: #7657ff;
+color: #7657ff;
 }
 
 header p {
-    color: #9da4bd;
-    margin-top: 8px;
+color: #9da4bd;
+margin-top: 8px;
 }
-
 
 /* MAIN */
 
 main {
-    width: 92%;
-    max-width: 800px;
-    margin: auto;
+width: 92%;
+max-width: 850px;
+margin: auto;
 }
-
 
 /* HERO */
 
 .hero {
-    text-align: center;
-    padding: 30px 0;
+text-align: center;
+padding: 30px 0;
 }
 
 .hero h1 {
-    font-size: 30px;
+font-size: 30px;
 }
 
 .hero p {
-    color: #9299b3;
-    margin-top: 8px;
+color: #9299b3;
+margin-top: 8px;
 }
-
 
 /* GAMES */
 
 .games {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 15px;
 }
 
 .game-card {
-    background: #111522;
-    border: 1px solid #20263a;
-    border-radius: 20px;
-    padding: 25px 15px;
-    text-align: center;
-    transition: 0.25s;
+background: #111522;
+border: 1px solid #20263a;
+border-radius: 20px;
+padding: 18px;
+text-align: center;
+transition: 0.25s;
 }
 
 .game-card:hover {
-    transform: translateY(-5px);
-    border-color: #7657ff;
+transform: translateY(-5px);
+border-color: #7657ff;
 }
 
-.game-icon {
-    font-size: 45px;
-    margin-bottom: 12px;
+.game-image {
+height: 130px;
+border-radius: 15px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 60px;
+margin-bottom: 15px;
+}
+
+.fire {
+background: linear-gradient(135deg, #ff512f, #dd2476);
+}
+
+.pubg {
+background: linear-gradient(135deg, #e5b100, #5c3b00);
+}
+
+.blood {
+background: linear-gradient(135deg, #4717a8, #111);
 }
 
 .game-card h2 {
-    font-size: 19px;
+font-size: 19px;
 }
 
 .game-card p {
-    color: #9299b3;
-    margin: 7px 0 17px;
+color: #9299b3;
+margin: 7px 0 17px;
 }
 
 .game-card span {
-    background: #7657ff;
-    padding: 9px 12px;
-    border-radius: 10px;
-    font-size: 13px;
+display: inline-block;
+background: #7657ff;
+padding: 9px 12px;
+border-radius: 10px;
+font-size: 13px;
 }
-
 
 /* PAYMENT */
 
 .payment {
-    margin-top: 40px;
-    background: #111522;
-    border: 1px solid #20263a;
-    border-radius: 20px;
-    padding: 22px;
+margin-top: 40px;
+background: #111522;
+border: 1px solid #20263a;
+border-radius: 20px;
+padding: 22px;
 }
 
 .payment h2 {
-    text-align: center;
+text-align: center;
 }
 
 .payment > p {
-    text-align: center;
-    color: #9299b3;
-    margin: 7px 0 20px;
+text-align: center;
+color: #9299b3;
+margin: 7px 0 20px;
 }
 
-
 .payment-card {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-
-    padding: 13px;
-    margin-top: 12px;
-
-    background: #181c2b;
-    border: 1px solid #292f43;
-    border-radius: 15px;
-
-    color: white;
-    text-align: right;
-
-    cursor: pointer;
-
-    transition: 0.2s;
+width: 100%;
+display: flex;
+align-items: center;
+gap: 15px;
+padding: 13px;
+margin-top: 12px;
+background: #181c2b;
+border: 1px solid #292f43;
+border-radius: 15px;
+color: white;
+text-align: right;
+cursor: pointer;
+transition: 0.2s;
 }
 
 .payment-card:hover {
-    transform: scale(1.01);
-    border-color: #7657ff;
-}
-
-.payment-card:active {
-    transform: scale(0.97);
+border-color: #7657ff;
 }
 
 .payment-card img {
-    width: 55px;
-    height: 55px;
-    background: white;
-    border-radius: 12px;
-    padding: 5px;
+width: 55px;
+height: 55px;
+background: white;
+border-radius: 12px;
+padding: 5px;
 }
 
 .payment-card div {
-    flex: 1;
+flex: 1;
 }
 
 .payment-card strong {
-    display: block;
-    font-size: 16px;
+display: block;
+font-size: 16px;
 }
 
 .payment-card small {
-    color: #8f97b0;
-    display: block;
-    margin-top: 5px;
+color: #8f97b0;
+display: block;
+margin-top: 5px;
 }
 
 .payment-card b {
-    color: #7657ff;
-    font-size: 22px;
+color: #7657ff;
+font-size: 22px;
 }
-
 
 /* CONTACT */
 
 .contact {
-    margin-top: 35px;
-    padding: 25px;
-    background: #111522;
-    border: 1px solid #20263a;
-    border-radius: 20px;
-    text-align: center;
+margin-top: 35px;
+padding: 25px;
+background: #111522;
+border: 1px solid #20263a;
+border-radius: 20px;
+text-align: center;
 }
 
 .contact h2 {
-    margin-bottom: 18px;
+margin-bottom: 18px;
 }
 
 .whatsapp,
 .instagram {
-    display: block;
-    padding: 15px;
-    border-radius: 12px;
-    margin-top: 10px;
-    font-weight: bold;
-    transition: 0.2s;
+display: block;
+padding: 15px;
+border-radius: 12px;
+margin-top: 10px;
+font-weight: bold;
 }
 
 .whatsapp {
-    background: #16b957;
+background: #16b957;
 }
 
 .instagram {
-    background: linear-gradient(90deg, #833ab4, #fd1d1d, #fcb045);
+background: linear-gradient(90deg, #833ab4, #fd1d1d, #fcb045);
 }
-
-.whatsapp:hover,
-.instagram:hover {
-    transform: translateY(-2px);
-}
-
 
 /* POPUP */
 
 .popup {
-    position: fixed;
-    inset: 0;
-
-    background: rgba(0, 0, 0, 0.75);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 20px;
-
-    opacity: 0;
-    visibility: hidden;
-
-    transition: 0.25s;
-
-    z-index: 100;
+position: fixed;
+inset: 0;
+background: rgba(0, 0, 0, 0.75);
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 20px;
+opacity: 0;
+visibility: hidden;
+transition: 0.25s;
+z-index: 100;
 }
 
 .popup.active {
-    opacity: 1;
-    visibility: visible;
+opacity: 1;
+visibility: visible;
 }
 
 .popup-content {
-    width: 100%;
-    max-width: 380px;
-
-    background: #111522;
-
-    border: 1px solid #292f43;
-
-    border-radius: 20px;
-
-    padding: 25px;
-
-    text-align: center;
-
-    transform: scale(0.9);
-
-    transition: 0.25s;
-}
-
-.popup.active .popup-content {
-    transform: scale(1);
+width: 100%;
+max-width: 380px;
+background: #111522;
+border: 1px solid #292f43;
+border-radius: 20px;
+padding: 25px;
+text-align: center;
 }
 
 .popup-content > img {
-    width: 70px;
-    height: 70px;
-
-    background: white;
-
-    border-radius: 15px;
-
-    padding: 5px;
-
-    margin-bottom: 12px;
+width: 70px;
+height: 70px;
+background: white;
+border-radius: 15px;
+padding: 5px;
+margin-bottom: 12px;
 }
 
 .popup-content p {
-    color: #9299b3;
-    margin: 10px 0 15px;
+color: #9299b3;
+margin: 10px 0 15px;
 }
 
 .close {
-    position: absolute;
-
-    margin-right: -5px;
-
-    width: 35px;
-    height: 35px;
-
-    border: none;
-
-    border-radius: 50%;
-
-    background: #252a3b;
-
-    color: white;
-
-    font-size: 24px;
-
-    cursor: pointer;
+float: left;
+width: 35px;
+height: 35px;
+border: none;
+border-radius: 50%;
+background: #252a3b;
+color: white;
+font-size: 24px;
+cursor: pointer;
 }
 
 .number-box {
-    display: flex;
-
-    align-items: center;
-
-    gap: 8px;
-
-    background: #080a12;
-
-    padding: 8px;
-
-    border-radius: 12px;
-
-    margin-bottom: 12px;
+display: flex;
+align-items: center;
+gap: 8px;
+background: #080a12;
+padding: 8px;
+border-radius: 12px;
+margin-bottom: 12px;
 }
 
 .number-box strong {
-    flex: 1;
-    direction: ltr;
-    font-size: 18px;
+flex: 1;
+direction: ltr;
+font-size: 18px;
 }
 
 .number-box button {
-    background: #7657ff;
-    color: white;
-
-    border: none;
-
-    padding: 9px 12px;
-
-    border-radius: 9px;
-
-    cursor: pointer;
+background: #7657ff;
+color: white;
+border: none;
+padding: 9px 12px;
+border-radius: 9px;
+cursor: pointer;
 }
 
 .popup-whatsapp {
-    display: block;
-
-    background: #16b957;
-
-    padding: 13px;
-
-    border-radius: 11px;
-
-    font-weight: bold;
+display: block;
+background: #16b957;
+padding: 13px;
+border-radius: 11px;
+font-weight: bold;
 }
-
 
 /* FOOTER */
 
 footer {
-    text-align: center;
-
-    color: #626a82;
-
-    padding: 30px 15px;
+text-align: center;
+color: #626a82;
+padding: 30px 15px;
 }
-
 
 /* MOBILE */
 
 @media (max-width: 650px) {
 
-    .games {
-        grid-template-columns: 1fr;
-    }
+.games {
+    grid-template-columns: 1fr;
+}
 
-    .game-card {
-        padding: 20px;
-    }
+.game-image {
+    height: 150px;
+}
 
-    .logo {
-        font-size: 34px;
-    }
+.logo {
+    font-size: 34px;
+}
 
-    .hero h1 {
-        font-size: 27px;
-    }
+.hero h1 {
+    font-size: 27px;
+}
+
 }
